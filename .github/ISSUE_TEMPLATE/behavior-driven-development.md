@@ -1,9 +1,9 @@
 ---
 name: Behavior Driven Development
 about: All Issues should follow BDD template
-title: ''
-labels: ''
-assignees: ''
+title: 'An explicit title'
+labels: 'refer to conventional commits'
+assignees: 'anyone effecting code needs to assigned'
 
 ---
 
