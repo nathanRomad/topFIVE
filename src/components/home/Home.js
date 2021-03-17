@@ -3,8 +3,8 @@ import "./Home.css"
 
 export const Home = () => (
     <>
+        <h1>Welcome to topFIVE</h1>
         <section className="topFIVEhomepage">
-            <h1>Welcome to topFIVE</h1>
             <article className="profileCard">
                 This will be the users profile card
             </article>
