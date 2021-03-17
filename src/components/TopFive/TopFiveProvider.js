@@ -7,12 +7,12 @@ export const TopFiveProvider = (props) => {
     console.log('topFive: ', topFive);
 
     const getTopFive = () => {
-        debugger
+        // debugger
         return fetch(`http://localhost:8088/topFIVE`)
             .then(res => res.json())
             .then(setTopFive)
     }
-    
+
     const getTopFiveById = (topFiveId) => {
         return fetch(`http://localhost:8088/topFIVE${topFiveId}`)
             .then(res => res.json())
@@ -35,7 +35,7 @@ export const TopFiveProvider = (props) => {
         return fetch(`http://localhost:8088/topFIVE/${topFiveId}`, {
             method: "DELETE"
         })
-            .then(() => getTasks(parseInt(sessionStorage.getItem("user"))))
+            .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
         // need to check reference for "user" above ^^
 
     }
