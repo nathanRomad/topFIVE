@@ -9,7 +9,7 @@ export const Home = () => (
                 This will be the users profile card
             </article>
             <main className="mainFeed">
-                This will be the Main Feed
+                The mainFeed will be all the topFIVE cards the currentUser is 'following'
             </main>
             <aside className="createNewtopFIVEcard">
                 This will be the create new topFIVE card
