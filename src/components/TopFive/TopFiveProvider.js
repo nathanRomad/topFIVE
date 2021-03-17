@@ -59,4 +59,3 @@ export const TopFiveProvider = (props) => {
         </TopFiveContext.Provider>
     )
 }
-}
