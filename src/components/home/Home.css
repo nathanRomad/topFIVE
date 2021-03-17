@@ -1,0 +1,19 @@
+.topFIVEhomepage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.profileCard {
+    border: 1px solid black;
+}
+
+.mainFeed {
+    border: 1px solid black;
+
+}
+
+.createNewtopFIVEcard {
+    border: 1px solid black;
+}
