@@ -7,11 +7,12 @@ export const TopFiveProvider = (props) => {
     console.log('topFive: ', topFive);
 
     const getTopFive = () => {
+        debugger
         return fetch(`http://localhost:8088/topFIVE`)
             .then(res => res.json())
             .then(setTopFive)
     }
-
+    
     const getTopFiveById = (topFiveId) => {
         return fetch(`http://localhost:8088/topFIVE${topFiveId}`)
             .then(res => res.json())
