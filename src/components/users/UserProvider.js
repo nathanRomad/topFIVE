@@ -11,6 +11,7 @@ export const UserProvider = (props) => {
 //useState hook to define a variable that holds the state of the component, 
 //and a function that updates it.
     const getUsers = () => {
+        debugger
         return fetch("http://localhost:8088/users")
         .then(res => res.json())
         .then(setUsers)

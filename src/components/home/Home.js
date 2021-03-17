@@ -1,6 +1,7 @@
 import React from "react";
+import "./Home.css"
 
-export const TopFivePage = () => (
+export const Home = () => (
     <>
         <h1>Welcome to topFIVE</h1>
         <section className="topFIVEhomepage">
@@ -8,7 +9,7 @@ export const TopFivePage = () => (
                 This will be the users profile card
             </article>
             <main className="mainFeed">
-                The mainFeed will change to the currentUsers topFIVE cards when selected.
+                The mainFeed will be all the topFIVE cards the currentUser is 'following'
             </main>
             <aside className="createNewtopFIVEcard">
                 This will be the create new topFIVE card
