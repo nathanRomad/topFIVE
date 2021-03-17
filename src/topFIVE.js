@@ -1,18 +1,19 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom"
-import { Login } from "./auth/Login"
-import { Register } from "./auth/Register"
-import { userStorageKey } from "./auth/authSettings"
+import { Login } from "./components/auth/Login"
+import { Register } from "./components/auth/Register"
+import { userStorageKey } from "./components/auth/authSettings"
+import { NavBar } from "./components/nav/NavBar"
+import { ApplicationViews } from "./components/ApplicationViews";
 
-
-
-export const topFIVE = () => (
+export const TopFive = () => (
   <>
     <Route render={() => {
       if (sessionStorage.getItem(userStorageKey)) {
         return (
           <>
-              //Components that are rendered when the user is authenticated go inside this React fragment
+            <NavBar />
+            <ApplicationViews />
           </>
         )
       } else {

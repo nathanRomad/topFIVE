@@ -5,7 +5,7 @@ import "./Login.css"
 
 export const Register = () => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
+    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", password: "", location: "", bio: "", image: "" })
     const [conflictDialog, setConflictDialog] = useState(false)
 
     const history = useHistory()
@@ -36,7 +36,10 @@ export const Register = () => {
                         },
                         body: JSON.stringify({
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            name: `${registerUser.firstName} ${registerUser.lastName}`,
+                            password: registerUser.password,
+                            location: registerUser.location,
+                            bio: registerUser.bio
                         })
                     })
                         .then(res => res.json())
@@ -77,10 +80,21 @@ export const Register = () => {
                     <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="inputPassword"> Password </label>
+                    <input type="password" name="password" id="password" className="form-control" placeholder="Password" required value={registerUser.password} onChange={handleInputChange} />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="inputLocation"> Location </label>
+                    <input type="location" name="location" id="location" className="form-control" placeholder="Location" required value={registerUser.location} onChange={handleInputChange} />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="inputBio"> Bio </label>
+                    <input type="bio" name="bio" id="bio" className="form-control" placeholder="Bio" required value={registerUser.bio} onChange={handleInputChange} />
+                </fieldset>
+                <fieldset>
                     <button type="submit"> Sign in </button>
                 </fieldset>
             </form>
         </main>
     )
 }
-

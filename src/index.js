@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom"
 import './index.css';
-import topFIVE, { topFIVE } from './topFIVE';
+import { TopFive } from './TopFive';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <topFIVE />
+      <TopFive />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,0 +1,10 @@
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+.nav-item {
+    flex-basis: 20%;
+    list-style-type: none;
+}
