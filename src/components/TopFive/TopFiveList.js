@@ -5,9 +5,12 @@ import { TopFiveContext } from "../TopFive/TopFiveProvider";
 import { TopFiveCard } from "./TopFiveCard";
 
 export const TopFiveList = () => {
+    // first I call useContext in order to get access to my data
     const { topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
+    // useHistory, so I can navigate away from the list if needed
     const history = useHistory()
 
+    // set a state 
     const [ userTopFive, setUserTopFive ] = useState([])
     console.log('userTopFive: ', userTopFive);
  
