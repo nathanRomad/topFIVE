@@ -6,7 +6,7 @@ export const TopFiveCard = ({ topFive }) => (
     style={{ width: '18rem' }}>
         <Card.Body>
             <Card.Header>topFIVE</Card.Header>
-            <Card.Title> Title {topFive.tite} </Card.Title>
+            <Card.Title> {topFive.title} </Card.Title>
             <Card.Text> num1 {topFive.num1} </Card.Text>
             <Card.Text> num2 {topFive.num2} </Card.Text>
             <Card.Text> num3 {topFive.num3} </Card.Text>
