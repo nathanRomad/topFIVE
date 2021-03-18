@@ -11,8 +11,9 @@ export const TopFiveForm = () => {
     const [isLoading, setIsLoading] = useState(true)
     const history = useHistory()
 
+    //for edit, hold on to state of animal in this view
     const [topFive, setTopFive] = useState({
-        userId: parseInt(sessionStorage.getItem("user")),
+        userId: parseInt(sessionStorage.getItem("app_user_id")),
         title: "",
         num1: "",
         num2: "",
@@ -22,14 +23,23 @@ export const TopFiveForm = () => {
         createdAt: ""
     })
 
+    //when field changes, update state. This causes a re-render and updates the view.
+    //Controlled component
     const handleInputChange = (event) => {
+        //When changing a state object or array,
+        //always create a copy make changes, and then set state.
         const newTopFive = { ...topFive }
+        //animal is an object with properties.
+        //set the property to the new value
         newTopFive[event.target.id] = event.target.value
+        //update state
+
         setTopFive(newTopFive)
     }
     const saveTopFive = () => {
         // debugger
         if (topFiveId) {
+            //PUT - update
             updateTopFive({
                 id: topFiveId,
                 name: topFive.title,
@@ -42,23 +52,24 @@ export const TopFiveForm = () => {
             })
                 .then(history.push("/topFIVE"))
         } else {
+            //POST - add
             addTopFive(topFive)
                 .then(history.push("/topFIVE"))
         }
     }
-    useEffect(() => {
-        getTopFive().then(() => {
-            if (topFiveId) {
-                getTopFiveById(topFiveId)
-                    .then(topFive => {
-                        setTopFive(topFive)
-                        setIsLoading(false)
-                    })
-            } else {
-                setIsLoading(false)
-            }
-        })
-    }, [])
+    // useEffect(() => {
+    //     getTopFive().then(() => {
+    //         if (topFiveId) {
+    //             getTopFiveById(topFiveId)
+    //                 .then(topFive => {
+    //                     setTopFive(topFive)
+    //                     setIsLoading(false)
+    //                 })
+    //         } else {
+    //             setIsLoading(false)
+    //         }
+    //     })
+    // }, [])
 
     return (
         <form className="topFiveCardForm">
@@ -99,10 +110,10 @@ export const TopFiveForm = () => {
                     <input type="text" id="topFiveCardForm__num5" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num5" value={topFive.num5} ></input>
                 </div>
             </fieldset>
-            
+
             <button className="btn btn-primary"
                 onClick={event => {
-                    event.preventDefault()
+                    event.preventDefault()  // Prevent browser from submitting the form and refreshing the page
                     saveTopFive()
                 }}>
                 create new topFIVE
