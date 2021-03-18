@@ -1,6 +1,5 @@
 import React from "react"
-import { Card } from 'react-bootstrap';
-
+import Card from 'react-bootstrap/Card';
 
 export const TopFiveCard = ({ topFive }) => (
     <Card style={{ width: '18rem' }}>
