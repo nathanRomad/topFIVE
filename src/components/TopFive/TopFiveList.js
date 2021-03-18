@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react"
+import { useHistory } from "react-router-dom" // import from libraries before your local modules
+import { TopFiveContext } from "../TopFive/TopFiveProvider";
+import { TopFiveCard } from "./TopFiveCard";
 
-export const TopFivePage = () => (
-    <>
-        <h1>Welcome to topFIVE</h1>
-        <section className="topFIVEhomepage">
-            <article className="profileCard">
-                This will be the users profile card
-            </article>
-            <main className="mainFeed">
-                The mainFeed will change to the currentUsers topFIVE cards when selected.
-            </main>
-            <aside className="createNewtopFIVEcard">
-                This will be the create new topFIVE card
-            </aside>
-        </section>
-    </>
-)
+export const TopFiveList = () => {
+    const { topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
+    const history = useHistory()
+
+    const { userTopFive, setUserTopFive } = useState([])
+ 
+
+    useEffect(() => {
+        // debugger
+        getTopFive()
+    }, [])
+
+    return (
+        <>
+            <h2>topFIVE</h2>
+            {/* <div>
+                {
+                    userTopFive.map(topFive => {
+                        return <TopFiveCard key={topFive.id} topFive={topFive} />
+                    })
+                },
+            </div> */}
+        </>
+    )
+}

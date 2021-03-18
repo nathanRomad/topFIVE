@@ -4,6 +4,7 @@ import { Home } from "./home/Home"
 import { TopFiveForm } from "./TopFive/TopFiveForm"
 import { TopFivePage } from "./TopFive/TopFiveList"
 import { TopFiveContext, TopFiveProvider } from "./TopFive/TopFiveProvider"
+import { TopFiveList } from "./TopFive/TopFiveList";
 
 export const ApplicationViews = () => {
     return (
@@ -12,6 +13,7 @@ export const ApplicationViews = () => {
                 <Home />
                 <TopFiveProvider>
                     <TopFiveForm />
+                    <TopFiveList />
                 </TopFiveProvider>
             </Route>
             {/* <Route exact path="/topFIVE">
