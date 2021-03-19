@@ -14,6 +14,7 @@ export const TopFiveProvider = (props) => {
     }
 
     const getTopFiveById = (topFiveId) => {
+        // debugger
         return fetch(`http://localhost:8088/topFIVE${topFiveId}`)
             .then(res => res.json())
     }
