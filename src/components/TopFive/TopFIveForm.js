@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { TopFiveContext } from "./TopFiveProvider"
+import "./TopFive.css"
 
 export const TopFiveForm = () => {
     const { getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
@@ -54,22 +55,32 @@ export const TopFiveForm = () => {
         } else {
             //POST - add
             addTopFive(topFive)
+                .then(setTopFive({
+                    userId: parseInt(sessionStorage.getItem("app_user_id")),
+                    title: "",
+                    num1: "",
+                    num2: "",
+                    num3: "",
+                    num4: "",
+                    num5: "",
+                    createdAt: ""
+                }))
                 .then(history.push("/"))
         }
     }
-    // useEffect(() => {
-    //     getTopFive().then(() => {
-    //         if (topFiveId) {
-    //             getTopFiveById(topFiveId)
-    //                 .then(topFive => {
-    //                     setTopFive(topFive)
-    //                     setIsLoading(false)
-    //                 })
-    //         } else {
-    //             setIsLoading(false)
-    //         }
-    //     })
-    // }, [])
+    useEffect(() => {
+        getTopFive().then(() => {
+            if (topFiveId) {
+                getTopFiveById(topFiveId)
+                    .then(topFive => {
+                        setTopFive(topFive)
+                        setIsLoading(false)
+                    })
+            } else {
+                setIsLoading(false)
+            }
+        })
+    }, [])
 
     return (
         <form className="topFiveCardForm">
@@ -112,7 +123,7 @@ export const TopFiveForm = () => {
             </fieldset>
 
             <button className="btn btn-primary"
-                // disabled={isLoading}
+                // disabled={isLoading} = disables button from being clicked / needs conditional to render button only if all data is filled out
                 onClick={event => {
                     event.preventDefault()  // Prevent browser from submitting the form and refreshing the page
                     saveTopFive()
