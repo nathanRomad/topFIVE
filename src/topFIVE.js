@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
 import { userStorageKey } from "./components/auth/authSettings"
