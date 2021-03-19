@@ -22,7 +22,9 @@ export const ApplicationViews = () => {
                 </TopFiveProvider>
             </Route>
             <Route path="/topFIVE/edit/:topFiveId(\d+)">
-                <TopFiveForm />
+                <TopFiveProvider>
+                    <TopFiveForm />
+                </TopFiveProvider>
             </Route>
 
             <Route path="/topFIVE">
