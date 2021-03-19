@@ -38,20 +38,25 @@ export const TopFiveForm = () => {
         setTopFive(newTopFive)
     }
     const saveTopFive = () => {
+        // if (parseInt(animal.locationId) === 0) {
+        //     window.alert("Please select a location")
+        // } else {
+        //   //disable the button - no extra clicks
+        //   setIsLoading(true);
         // debugger
         if (topFiveId) {
             //PUT - update
             updateTopFive({
                 id: topFiveId,
-                name: topFive.title,
+                title: topFive.title,
                 num1: topFive.num1,
                 num2: topFive.num2,
                 num3: topFive.num3,
                 num4: topFive.num4,
                 num5: topFive.num5,
-                userId: topFive.userId
+                userId: parseInt(topFive.userId)
             })
-                .then()
+                .then(history.push("/"))
         } else {
             //POST - add
             addTopFive(topFive)
@@ -128,8 +133,7 @@ export const TopFiveForm = () => {
                     event.preventDefault()  // Prevent browser from submitting the form and refreshing the page
                     saveTopFive()
                 }}>
-                create new topFIVE
-                </button>
+                {topFiveId ? "Save topFIVE" : "Add topFIVE"}</button>
         </form>
     )
 }
