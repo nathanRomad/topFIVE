@@ -1,0 +1,15 @@
+.topFiveCardForm {
+    border: 1px solid black;
+    width: 450px;
+    height: 650px;
+}
+
+/* .topFIVEcard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start space-evenly;
+    border: 1px solid black;
+    width: min-content;
+    height: min-content;
+} */
