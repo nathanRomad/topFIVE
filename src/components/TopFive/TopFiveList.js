@@ -27,6 +27,7 @@ export const TopFiveList = () => {
     }, [topFive])
 
     return (
+        // need a conditional to determine if there are any cards, true=render cards false=hold render
         <>
             <h2>topFIVE</h2>
             <div>

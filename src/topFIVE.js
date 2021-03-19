@@ -25,7 +25,7 @@ export const TopFive = () => (
     <Route path="/login">
       <Login />
     </Route>
-    <Route path="/register">
+    <Route path="/register">x
       <Register />
     </Route>
   </>
