@@ -21,6 +21,9 @@ export const NavBar = (props) => {
         <li className="nav-item">
           <Link className="nav-link" to="/messages">Messages</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/messages">Messages</Link>
+        </li>
       </ul>
     </nav>
   )
