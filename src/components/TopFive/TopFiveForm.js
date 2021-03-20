@@ -7,7 +7,7 @@ export const TopFiveForm = () => {
     const { getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
 
     const { topFiveId } = useParams()
-    console.log('topFiveId: ', topFiveId);
+    // console.log('topFiveId: ', topFiveId);
 
     const [isLoading, setIsLoading] = useState(true)
     const history = useHistory()
@@ -89,7 +89,7 @@ export const TopFiveForm = () => {
 
     return (
         <form className="topFiveCardForm">
-            <h2 className="topFiveCardForm__formTitle">Create New topFIVE</h2>
+            <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Title:</label>
