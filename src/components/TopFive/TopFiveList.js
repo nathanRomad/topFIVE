@@ -35,7 +35,7 @@ export const TopFiveList = () => {
                     userTopFive.map(topFive => {
                         return <TopFiveCard key={topFive.id} topFive={topFive} />
                     })
-                },
+                }
             </div>
         </>
     )
