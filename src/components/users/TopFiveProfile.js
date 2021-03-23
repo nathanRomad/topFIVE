@@ -12,7 +12,7 @@ export const TopFiveProfile = () => {
     console.log('users: ', users);
 
     const history = useHistory()
-    const [topFiveProfile, setTopFiveProfile] = useState()
+    const [topFiveProfile, setTopFiveProfile] = useState([])
 
     useEffect(() => {
         getUsers()
