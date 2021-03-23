@@ -42,7 +42,7 @@ export const TopFiveDetail = () => {
                     <button onClick={handleRelease}>Delete topFive</button>
                     <button onClick={() => {
                         history.push(`/topFIVE/edit/${topFiveDetail.id}`)
-                    }}>Edit</button>
+                    }}>Edit topFive</button>
                 </Card.Body>
             </Card>
         </section>
