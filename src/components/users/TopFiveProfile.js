@@ -20,7 +20,7 @@ export const TopFiveProfile = () => {
 
     useEffect(() => {
         const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
-        const filteredProfileCard = users.filter(users => users.id === currentUserId)
+        const filteredProfileCard = users.filter(user => user.id === currentUserId)
         setTopFiveProfile(filteredProfileCard)
     }, [users])
 
