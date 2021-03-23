@@ -12,14 +12,11 @@ export const ApplicationViews = () => {
     return (
         <>
             <Route exact path="/">
-                <Home />
                 <TopFiveProvider>
-                    <TopFiveForm />
-                    <TopFiveList />
+                    <UserProvider>
+                        <Home />
+                    </UserProvider>
                 </TopFiveProvider>
-                <UserProvider>
-                    <TopFiveProfile />
-                </UserProvider>
             </Route>
             <Route exact path="/topFIVE/detail/:topFiveId(\d+)">
                 <TopFiveProvider>
