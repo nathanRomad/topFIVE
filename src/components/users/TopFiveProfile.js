@@ -21,7 +21,7 @@ export const TopFiveProfile = () => {
     return (
         <>
             <h2>topFive Profile Card</h2>
-            <TopFiveProfileCard users={users}/>
+            <TopFiveProfileCard key={users.id} users={users}/>
         </>
     )
 }
