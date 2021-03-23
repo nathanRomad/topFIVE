@@ -29,7 +29,7 @@ export const NavBar = (props) => {
           <Link className="nav-link" to="/messages">Messages</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/login" onClick={Logout}>Logout</Link>
+          <Link className="nav-link" onClick={Logout}>Logout</Link>
         </li>
       </ul>
     </nav>
