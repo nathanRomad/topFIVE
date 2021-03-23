@@ -26,16 +26,16 @@ export const TopFiveProfile = () => {
 
     return (
         <>
-            <section className="topFiveProfileCardContainer">
-            <h2>topFive Profile Card</h2>
-            <div>
-                {
-                    topFiveProfile.map(users => {
-                        return <TopFiveProfileCard key={users.id} users={users} />
-                    })
-                }
-            </div>
-            </section>
+                <section className="topFiveProfileCardContainer">
+                <h2>topFive Profile Card</h2>
+                <div>
+                    {
+                        topFiveProfile.map(users => {
+                            return <TopFiveProfileCard key={users.id} users={users} />
+                        })
+                    }
+                </div>
+                </section>
         </>
     )
 }

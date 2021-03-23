@@ -88,52 +88,52 @@ export const TopFiveForm = () => {
     }, [])
 
     return (
-        <form className="topFiveCardForm">
-            <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Title:</label>
-                    <input type="text" id="title" onChange={handleInputChange} required autoFocus className="form-control" placeholder="topFIVE title" value={topFive.title} />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="topFiveCardNum1">Number 1: </label>
-                    <input type="text" id="num1" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num1" value={topFive.num1} ></input>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="topFiveCardNum2">Number 2: </label>
-                    <input type="text" id="num2" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num2" value={topFive.num2} ></input>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="topFiveCardNum3">Number 3: </label>
-                    <input type="text" id="num3" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num3" value={topFive.num3} ></input>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="topFiveCardNum4">Number 4: </label>
-                    <input type="text" id="num4" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num4" value={topFive.num4} ></input>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="topFiveCardNum5">Number 5: </label>
-                    <input type="text" id="num5" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num5" value={topFive.num5} ></input>
-                </div>
-            </fieldset>
+            <form className="topFiveCardForm">
+                <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="name">Title:</label>
+                        <input type="text" id="title" onChange={handleInputChange} required autoFocus className="form-control" placeholder="topFIVE title" value={topFive.title} />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="topFiveCardNum1">Number 1: </label>
+                        <input type="text" id="num1" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num1" value={topFive.num1} ></input>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="topFiveCardNum2">Number 2: </label>
+                        <input type="text" id="num2" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num2" value={topFive.num2} ></input>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="topFiveCardNum3">Number 3: </label>
+                        <input type="text" id="num3" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num3" value={topFive.num3} ></input>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="topFiveCardNum4">Number 4: </label>
+                        <input type="text" id="num4" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num4" value={topFive.num4} ></input>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="topFiveCardNum5">Number 5: </label>
+                        <input type="text" id="num5" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num5" value={topFive.num5} ></input>
+                    </div>
+                </fieldset>
 
-            <button className="btn btn-primary"
-                // disabled={isLoading} = disables button from being clicked / needs conditional to render button only if all data is filled out
-                onClick={event => {
-                    event.preventDefault()  // Prevent browser from submitting the form and refreshing the page
-                    saveTopFive()
-                }}>
-                {topFiveId ? "Save topFIVE" : "Add topFIVE"}</button>
-        </form>
+                <button className="btn btn-primary"
+                    // disabled={isLoading} = disables button from being clicked / needs conditional to render button only if all data is filled out
+                    onClick={event => {
+                        event.preventDefault()  // Prevent browser from submitting the form and refreshing the page
+                        saveTopFive()
+                    }}>
+                    {topFiveId ? "Save topFIVE" : "Add topFIVE"}</button>
+            </form>
     )
 }

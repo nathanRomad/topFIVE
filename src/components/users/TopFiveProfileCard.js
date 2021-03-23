@@ -13,7 +13,7 @@ export const TopFiveProfileCard = ({ users }) => (
                 </Card.Text>
                 <Card.Text> {users.bio}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
         </Card>
     </section>

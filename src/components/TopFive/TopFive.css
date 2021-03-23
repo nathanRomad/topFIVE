@@ -16,6 +16,10 @@
     height: auto;
 }
 
+.homepageContainer {
+    display: flex;
+}
+
 /* .cardButton {
     display: flex;
     justify-content: flex-end;
