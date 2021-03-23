@@ -30,7 +30,7 @@ export const TopFiveProfile = () => {
             <h2>topFive Profile Card</h2>
             <div>
                 {
-                    users.map(users => {
+                    topFiveProfile.map(users => {
                         return <TopFiveProfileCard key={users.id} users={users} />
                     })
                 }
