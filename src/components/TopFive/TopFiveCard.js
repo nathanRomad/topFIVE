@@ -1,5 +1,6 @@
 import React from "react"
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
 import { Link } from "react-router-dom"
 
 export const TopFiveCard = ({ topFive }) => (
@@ -16,6 +17,7 @@ export const TopFiveCard = ({ topFive }) => (
                 <Card.Text> num3 {topFive.num3} </Card.Text>
                 <Card.Text> num4 {topFive.num4} </Card.Text>
                 <Card.Text> num5 {topFive.num5} </Card.Text>
+                {/* <Button className="cardButton">{topFive.id ? "follow topFIVE" : "unfollow topFIVE"} </Button> */}
             </Card.Body>
         </Card>
     </section>
