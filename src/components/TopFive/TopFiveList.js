@@ -3,6 +3,7 @@ import { userStorageKey } from "../auth/authSettings";
 import { useHistory } from "react-router-dom" // import from libraries before your local modules
 import { TopFiveContext } from "../TopFive/TopFiveProvider";
 import { TopFiveCard } from "./TopFiveCard";
+import "./TopFive.css"
 
 export const TopFiveList = () => {
     // first I call useContext in order to get access to my data
@@ -11,9 +12,9 @@ export const TopFiveList = () => {
     const history = useHistory()
 
     // set a state 
-    const [ userTopFive, setUserTopFive ] = useState([])
-    console.log('userTopFive: ', userTopFive);
- 
+    const [userTopFive, setUserTopFive] = useState([])
+    // console.log('userTopFive: ', userTopFive);
+
 
     useEffect(() => {
         // debugger
@@ -29,14 +30,16 @@ export const TopFiveList = () => {
     return (
         // need a conditional to determine if there are any cards, true=render cards false=hold render
         <>
-            <h2>topFIVE</h2>
-            <div>
-                {
-                    userTopFive.map(topFive => {
-                        return <TopFiveCard key={topFive.id} topFive={topFive} />
-                    })
-                },
-            </div>
+            <section className="topFiveCardContainer">
+                <h2>topFIVE</h2>
+                <div>
+                    {
+                        userTopFive.map(topFive => {
+                            return <TopFiveCard key={topFive.id} topFive={topFive} />
+                        })
+                    }
+                </div>
+            </section>
         </>
     )
 }

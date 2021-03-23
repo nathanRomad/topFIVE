@@ -4,6 +4,18 @@
     height: 650px;
 }
 
+.topFiveCardContainer {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
+
+.topFiveProfileCardContainer {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
+
 /* .cardButton {
     display: flex;
     justify-content: flex-end;

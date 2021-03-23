@@ -4,7 +4,7 @@ export const TopFiveContext = createContext()
 
 export const TopFiveProvider = (props) => {
     const [topFive, setTopFive] = useState([])
-    console.log('topFive: ', topFive);
+    // console.log('topFive: ', topFive);
 
     const getTopFive = () => {
         // debugger
