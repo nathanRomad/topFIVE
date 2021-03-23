@@ -12,7 +12,7 @@ export const TopFiveList = () => {
 
     // set a state 
     const [ userTopFive, setUserTopFive ] = useState([])
-    console.log('userTopFive: ', userTopFive);
+    // console.log('userTopFive: ', userTopFive);
  
 
     useEffect(() => {

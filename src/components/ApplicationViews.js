@@ -5,6 +5,8 @@ import { TopFiveForm } from "./TopFive/TopFiveForm"
 import { TopFiveContext, TopFiveProvider } from "./TopFive/TopFiveProvider"
 import { TopFiveList } from "./TopFive/TopFiveList";
 import { TopFiveDetail } from "./TopFive/TopFiveDetail";
+import { TopFiveProfile } from "./users/TopFiveProfile"
+import { UserProvider } from "./users/UserProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -15,6 +17,9 @@ export const ApplicationViews = () => {
                     <TopFiveForm />
                     <TopFiveList />
                 </TopFiveProvider>
+                <UserProvider>
+                    <TopFiveProfile />
+                </UserProvider>
             </Route>
             <Route exact path="/topFIVE/detail/:topFiveId(\d+)">
                 <TopFiveProvider>
