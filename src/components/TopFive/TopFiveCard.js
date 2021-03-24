@@ -13,12 +13,12 @@ export const TopFiveCard = ({ topFive }) => {
     // console.log('topFive: ', topFive);
 
     const { getFollow, addFollow, deleteFollow } = useContext(FollowContext)
-    const { users, getUsers, searchTerms, setSearchTerms, getUserById } = useContext(UserContext)
+    // const { users, getUsers, searchTerms, setSearchTerms, getUserById } = useContext(UserContext)
 
     const handleFollow = () => {
         addFollow({
             topFiveId: topFive.id,
-            userId: topFive.userId
+            userId: currentUserId
         })
     }
 
