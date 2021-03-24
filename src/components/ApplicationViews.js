@@ -6,7 +6,8 @@ import { TopFiveContext, TopFiveProvider } from "./TopFive/TopFiveProvider"
 import { TopFiveList } from "./TopFive/TopFiveList";
 import { TopFiveDetail } from "./TopFive/TopFiveDetail";
 import { TopFiveProfile } from "./users/TopFiveProfile"
-import { UserProvider } from "./users/UserProvider"
+import { UserContext, UserProvider } from "./users/UserProvider"
+import { DiscoverList } from "./users/DiscoverList"
 
 export const ApplicationViews = () => {
     return (
@@ -30,6 +31,12 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route path="/topFIVE">
+            </Route>
+
+            <Route path="/discover">
+                <UserProvider>
+                    <DiscoverList />
+                </UserProvider>
             </Route>
         </>
     )
