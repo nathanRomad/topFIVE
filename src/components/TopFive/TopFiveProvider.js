@@ -8,7 +8,7 @@ export const TopFiveProvider = (props) => {
 
     const getTopFive = () => {
         // debugger
-        return fetch(`http://localhost:8088/topFIVE`)
+        return fetch(`http://localhost:8088/topFIVE?_embed=following`)
             .then(res => res.json())
             .then(setTopFive)
     }
@@ -28,7 +28,6 @@ export const TopFiveProvider = (props) => {
             body: JSON.stringify(topFive)
         })
             .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
-        // need to check reference for "user" above ^^
     }
 
     const deleteTopFive = (topFiveId) => {
@@ -37,7 +36,6 @@ export const TopFiveProvider = (props) => {
             method: "DELETE"
         })
             .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
-        // need to check reference for "user" above ^^
 
     }
 
@@ -50,8 +48,7 @@ export const TopFiveProvider = (props) => {
             body: JSON.stringify(topFive)
         })
             .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
-        // need to check reference for "user" above ^^
-
+            
     }
     return (
         <TopFiveContext.Provider value={{
