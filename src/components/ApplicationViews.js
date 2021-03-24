@@ -34,9 +34,11 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route path="/discover">
-                <UserProvider>
-                    <DiscoverList />
-                </UserProvider>
+                <TopFiveProvider>
+                    <UserProvider>
+                        <DiscoverList />
+                    </UserProvider>
+                </TopFiveProvider>
             </Route>
         </>
     )

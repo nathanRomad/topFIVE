@@ -8,9 +8,11 @@ export const TopFiveDetail = () => {
     const { getTopFiveById, deleteTopFive } = useContext(TopFiveContext)
 
     const [topFiveDetail, setTopFiveDetail] = useState({})
-    console.log('topFiveDetail: ', topFiveDetail);
+    // console.log('topFiveDetail: ', topFiveDetail);
 
     const { topFiveId } = useParams();
+    // console.log('topFiveId: ', topFiveId);
+
     const history = useHistory();
 
     const handleRelease = () => {
@@ -45,6 +47,6 @@ export const TopFiveDetail = () => {
                     }}>Edit topFive</button>
                 </Card.Body>
             </Card>
-        </section>
+        </section >
     )
 }

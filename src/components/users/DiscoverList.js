@@ -1,24 +1,24 @@
 import React, { useContext, useEffect, useState } from "react"
 import { userStorageKey } from "../auth/authSettings"
 import { useHistory } from "react-router-dom"
-import { UserContext } from "../users/UserProvider";
+import { TopFiveContext } from "../TopFive/TopFiveProvider";
 import { TopFiveCard } from "../TopFive/TopFiveCard";
 
 export const DiscoverList = () => {
-    const { users, getUsers, searchTerms, setSearchTerms, getUserById } = useContext(UserContext)
+    const { topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
     const history = useHistory()
     const [discoverTopFive, setDiscoverTopFive] = useState([])
 
     useEffect(() => {
-        getUsers()
+        getTopFive()
     }, [])
 
     useEffect(() => {
         const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
-        const filteredDiscover = users.filter(user => user.id !== currentUserId)
-        console.log('filteredDiscover: ', filteredDiscover);
+        const filteredDiscover = topFive.filter(topFive => topFive.userId !== currentUserId)
+        // console.log('filteredDiscover: ', filteredDiscover);
         setDiscoverTopFive(filteredDiscover)
-    }, [users])
+    }, [topFive])
 
     return (
         <>
@@ -26,8 +26,8 @@ export const DiscoverList = () => {
                 <h2>Discover topFIVE</h2>
                 <div>
                     {
-                        discoverTopFive.map(users => {
-                            // return <TopFiveCard key={users.id} users={users} />
+                        discoverTopFive.map(topFive => {
+                            return <TopFiveCard key={topFive.id} topFive={topFive} />
                         })
                     }
                 </div>
@@ -35,5 +35,3 @@ export const DiscoverList = () => {
         </>
     )
 }
-
-// key={topFive.id} topFive={topFive}
