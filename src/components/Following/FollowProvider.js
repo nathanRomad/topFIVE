@@ -1,60 +1,43 @@
-// import React, { useState, createContext } from "react"
+import React, { useState, createContext } from "react"
 
-// export const FollowContext = createContext()
+export const FollowContext = createContext()
 
-// export const FollowProvider = (props) => {
-//     const [topFive, setTopFive] = useState([])
-//     // console.log('topFive: ', topFive);
+export const FollowProvider = (props) => {
+    const [following, setFollowing] = useState([])
 
-//     const getTopFive = () => {
-//         // debugger
-//         return fetch(`http://localhost:8088/topFIVE`)
-//             .then(res => res.json())
-//             .then(setTopFive)
-//     }
+    const getFollow = () => {
+        return fetch(`http://localhost:8088/following`)
+            .then(res => res.json())
+            .then(setFollowing)
+    }
 
-//     const getTopFiveById = (topFiveId) => {
-//         // debugger
-//         return fetch(`http://localhost:8088/topFIVE/${topFiveId}`)
-//             .then(res => res.json())
-//     }
 
-//     const addTopFive = (topFive) => {
-//         return fetch("http://localhost:8088/topFIVE/", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(topFive)
-//         })
-//             .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
-//     }
+    const addFollow = (topFive) => {
+        return fetch("http://localhost:8088/following/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(topFive)
+        })
+            .then(() => getFollow(parseInt(sessionStorage.getItem("user"))))
+    }
+// NOT SURE ABOUT addFollow - need to check what to pass in
 
-//     const deleteTopFive = (topFiveId) => {
-//         // debugger
-//         return fetch(`http://localhost:8088/topFIVE/${topFiveId}`, {
-//             method: "DELETE"
-//         })
-//             .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
+    const deleteFollow = (topFiveId) => {
+        return fetch(`http://localhost:8088/following/${topFiveId}`, {
+            method: "DELETE"
+        })
+            .then(() => getFollow(parseInt(sessionStorage.getItem("user"))))
+    }
 
-//     }
+    // NOT SURE ABOUT deleteFollow - need to check what to pass in
 
-//     const updateTopFive = (topFive) => {
-//         return fetch(`http://localhost:8088/topFIVE/${topFive.id}`, {
-//             method: "PUT",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(topFive)
-//         })
-//             .then(() => getTopFive(parseInt(sessionStorage.getItem("user"))))
-            
-//     }
-//     return (
-//         <TopFiveContext.Provider value={{
-//             topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive
-//         }}>
-//             {props.children}
-//         </TopFiveContext.Provider>
-//     )
-// }
+    return (
+        <FollowContext.Provider value={{
+            following, getFollow, addFollow, deleteFollow
+        }}>
+            {props.children}
+        </FollowContext.Provider>
+    )
+}

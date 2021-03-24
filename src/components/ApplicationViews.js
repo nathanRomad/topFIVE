@@ -8,6 +8,7 @@ import { TopFiveDetail } from "./TopFive/TopFiveDetail";
 import { TopFiveProfile } from "./users/TopFiveProfile"
 import { UserContext, UserProvider } from "./users/UserProvider"
 import { DiscoverList } from "./users/DiscoverList"
+import { FollowProvider } from "./Following/FollowProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -15,7 +16,9 @@ export const ApplicationViews = () => {
             <Route exact path="/">
                 <TopFiveProvider>
                     <UserProvider>
-                        <Home />
+                        <FollowProvider>
+                            <Home />
+                        </FollowProvider>
                     </UserProvider>
                 </TopFiveProvider>
             </Route>
@@ -36,7 +39,9 @@ export const ApplicationViews = () => {
             <Route path="/discover">
                 <TopFiveProvider>
                     <UserProvider>
-                        <DiscoverList />
+                        <FollowProvider>
+                            <DiscoverList />
+                        </FollowProvider>
                     </UserProvider>
                 </TopFiveProvider>
             </Route>

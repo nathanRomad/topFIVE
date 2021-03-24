@@ -15,6 +15,8 @@ export const DiscoverList = () => {
 
     useEffect(() => {
         const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
+        console.log('currentUserId: ', currentUserId);
+
         const filteredDiscover = topFive.filter(topFive => topFive.userId !== currentUserId)
         // console.log('filteredDiscover: ', filteredDiscover);
         setDiscoverTopFive(filteredDiscover)
