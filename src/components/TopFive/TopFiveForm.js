@@ -126,7 +126,6 @@ export const TopFiveForm = () => {
                         <input type="text" id="num5" onChange={handleInputChange} required className="form-control" placeholder="topFIVE num5" value={topFive.num5} ></input>
                     </div>
                 </fieldset>
-
                 <button className="btn btn-primary"
                     // disabled={isLoading} = disables button from being clicked / needs conditional to render button only if all data is filled out
                     onClick={event => {

@@ -7,12 +7,9 @@ import { UserContext } from "../users/UserProvider";
 import { FollowContext } from "../Following/FollowProvider";
 
 const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
-// console.log('currentUserId: ', currentUserId);
 
 export const TopFiveCard = ({ topFive }) => {
-    // console.log('topFive: ', topFive);
-
-    const { getFollow, addFollow, deleteFollow } = useContext(FollowContext)
+    const { following, getFollow, addFollow, deleteFollow } = useContext(FollowContext)
     // const { users, getUsers, searchTerms, setSearchTerms, getUserById } = useContext(UserContext)
 
     const handleFollow = () => {
@@ -21,6 +18,17 @@ export const TopFiveCard = ({ topFive }) => {
             userId: currentUserId
         })
     }
+
+    const handleUnfollow = () => {
+        deleteFollow(topFive.id)
+    }
+
+    useEffect(() => {
+        // debugger
+        getFollow()
+    }, [])
+
+    const isFollowing = following.find(followers => followers.topFiveId === topFive.id)
 
     return (
         <section className="topFIVEcard">
@@ -43,12 +51,13 @@ export const TopFiveCard = ({ topFive }) => {
                     <Card.Text> num4 {topFive.num4} </Card.Text>
                     <Card.Text> num5 {topFive.num5} </Card.Text>
                     {
-                        topFive.userId !== currentUserId
-                            ? <Button onClick={handleFollow} className="cardFollow"> Follow </Button>
-                            : ""
+                        isFollowing
+                            ? <Button onClick={handleUnfollow} className="cardFollow"> Unfollow </Button>
+                            : <Button onClick={handleFollow} className="cardFollow"> Follow </Button>
                     }
                 </Card.Body>
             </Card>
         </section>
     )
 }
+
