@@ -9,7 +9,7 @@ export const TopFiveProfile = () => {
     const { users, getUsers, searchTerms, setSearchTerms, getUserById } = useContext(UserContext)
     // const { topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
     // console.log('topFive: ', topFive);
-    console.log('users: ', users);
+    // console.log('users: ', users);
 
     const history = useHistory()
     const [topFiveProfile, setTopFiveProfile] = useState([])

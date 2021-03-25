@@ -7,7 +7,7 @@ import { TopFiveList } from "./TopFive/TopFiveList";
 import { TopFiveDetail } from "./TopFive/TopFiveDetail";
 import { TopFiveProfile } from "./users/TopFiveProfile"
 import { UserContext, UserProvider } from "./users/UserProvider"
-import { DiscoverList } from "./users/DiscoverList"
+import { DiscoverList } from "./TopFive/DiscoverList"
 import { FollowProvider } from "./Following/FollowProvider"
 
 export const ApplicationViews = () => {

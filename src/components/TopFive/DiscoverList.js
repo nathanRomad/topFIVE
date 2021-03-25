@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
 import { userStorageKey } from "../auth/authSettings"
 import { useHistory } from "react-router-dom"
-import { TopFiveContext } from "../TopFive/TopFiveProvider";
-import { TopFiveCard } from "../TopFive/TopFiveCard";
+import { TopFiveContext } from "./TopFiveProvider";
+import { TopFiveCard } from "./TopFiveCard";
 
 export const DiscoverList = () => {
     const { topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
