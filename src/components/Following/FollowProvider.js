@@ -21,7 +21,7 @@ export const FollowProvider = (props) => {
             },
             body: JSON.stringify(topFive)
         })
-            .then(() => getFollow(parseInt(sessionStorage.getItem("user"))))
+            .then(() => getFollow())
     }
 // NOT SURE ABOUT addFollow - need to check what to pass in
 
@@ -29,10 +29,8 @@ export const FollowProvider = (props) => {
         return fetch(`http://localhost:8088/following/${topFiveId}`, {
             method: "DELETE"
         })
-            .then(() => getFollow(parseInt(sessionStorage.getItem("user"))))
+            .then(() => getFollow())
     }
-
-    // NOT SURE ABOUT deleteFollow - need to check what to pass in
 
     return (
         <FollowContext.Provider value={{

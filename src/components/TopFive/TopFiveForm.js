@@ -30,6 +30,7 @@ export const TopFiveForm = () => {
         //When changing a state object or array,
         //always create a copy make changes, and then set state.
         const newTopFive = { ...topFive }
+        // spread operator allows us to return each value of the array and use each one at a time (destructure/flatten data)
         //animal is an object with properties.
         //set the property to the new value
         newTopFive[event.target.id] = event.target.value
@@ -70,7 +71,7 @@ export const TopFiveForm = () => {
                     num5: "",
                     createdAt: ""
                 }))
-                .then(history.push("/"))
+                .then(history.push("/topFIVE"))
         }
     }
     useEffect(() => {
