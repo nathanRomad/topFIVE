@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import Card from 'react-bootstrap/Card';
 import { userStorageKey } from "../auth/authSettings";
 import Button from 'react-bootstrap/Button'
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { UserContext } from "../users/UserProvider";
 import { FollowContext } from "../Following/FollowProvider";
 
@@ -11,13 +11,14 @@ import { FollowContext } from "../Following/FollowProvider";
 export const TopFiveCard = ({ topFive }) => {
     const { following, getFollow, addFollow, deleteFollow } = useContext(FollowContext)
     const isFollowing = following.find(followers => followers.topFiveId === topFive.id)
+    const history = useHistory()
 
     const handleFollow = () => {
         addFollow({
             topFiveId: topFive.id,
             userId: parseInt(sessionStorage.getItem(userStorageKey))
         })
-            // .then(() => )
+            .then(history.push("/"))
     }
 
     const handleUnfollow = () => {
