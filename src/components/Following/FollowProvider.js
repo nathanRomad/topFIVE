@@ -4,6 +4,7 @@ export const FollowContext = createContext()
 
 export const FollowProvider = (props) => {
     const [following, setFollowing] = useState([])
+    // console.log('following: ', following);
 
     const getFollow = () => {
         return fetch(`http://localhost:8088/following`)
