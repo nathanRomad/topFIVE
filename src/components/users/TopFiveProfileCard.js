@@ -2,6 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
+// import '../../App.css'
 
 export const TopFiveProfileCard = ({ users }) => (
     <section className="topFIVEprofileCard">
@@ -13,7 +14,7 @@ export const TopFiveProfileCard = ({ users }) => (
                 </Card.Text>
                 <Card.Text> {users.bio}
                 </Card.Text>
-                {/* <Button variant="primary">Go somewhere</Button> */}
+                {/* <Button variant="primary">Go to edit profile</Button> */}
             </Card.Body>
         </Card>
     </section>

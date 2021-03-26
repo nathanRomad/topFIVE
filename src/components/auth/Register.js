@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useHistory } from "react-router-dom"
 import { authApi, userStorageKey } from "./authSettings"
 import "./Login.css"
+import '../../App.css';
 
 export const Register = () => {
 
@@ -17,7 +18,7 @@ export const Register = () => {
     }
 
     const existingUserCheck = () => {
-        
+
         return fetch(`${authApi.localApiBaseUrl}/${authApi.endpoint}?email=${registerUser.email}`)
             .then(res => res.json())
             .then(user => !!user.length)
@@ -92,9 +93,65 @@ export const Register = () => {
                     <input type="bio" name="bio" id="bio" className="form-control" placeholder="Bio" required value={registerUser.bio} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
+                </fieldset>
+                <fieldset>
                     <button type="submit"> Sign in </button>
                 </fieldset>
             </form>
+            <App />
         </main>
     )
 }
+
+class App extends React.Component {
+    state = {
+        imageUrl: null,
+        imageAlt: null,
+    }
+
+    render() {
+        const { imageUrl, imageAlt } = this.state;
+
+
+        const handleImageUpload = () => {
+            const { files } = document.querySelector('input[type="file"]')
+            const formData = new FormData();
+            formData.append('file', files[0]);
+            // replace this with your upload preset name
+            formData.append('upload_preset', 'topFIVE_upload');
+            const options = {
+                method: 'POST',
+                body: formData,
+            };
+
+            // replace cloudname with your Cloudinary cloud_name
+            return fetch('https://api.Cloudinary.com/v1_1/dy1vv6pdy/image/upload', options)
+                .then(res => res.json())
+                .then(res => console.log(res))
+                .catch(err => console.log(err));
+        }
+
+        return (
+            <main className="App">
+                <section className="left-side">
+                    <form>
+                        <div className="form-group">
+                            <input type="file" />
+                        </div>
+
+                        <button type="button" className="btn" onClick={this.handleImageUpload}>Submit</button>
+                        <button type="button" className="btn widget-btn">Upload Via Widget</button>
+                    </form>
+                </section>
+                <section className="right-side">
+                    <p>The resulting image will be displayed here</p>
+                    {imageUrl && (
+                        <img src={imageUrl} alt={imageAlt} className="displayed-image" />
+                    )}
+                </section>
+            </main>
+        );
+    }
+}
+
+export default App;
