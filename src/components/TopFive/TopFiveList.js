@@ -6,7 +6,7 @@ import "./TopFive.css"
 
 export const TopFiveList = () => {
     // first I call useContext in order to get access to my data
-    const { topFive, getTopFive, getTopFiveById, addTopFive, deleteTopFive, updateTopFive } = useContext(TopFiveContext)
+    const { topFive, getTopFive } = useContext(TopFiveContext)
 
     const [userTopFive, setUserTopFive] = useState([])
 
@@ -18,6 +18,7 @@ export const TopFiveList = () => {
 
     useEffect(() => {
         const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
+        
         const filteredTopFive = topFive.filter(topFive => topFive.userId === currentUserId)
         setUserTopFive(filteredTopFive)
     }, [topFive])

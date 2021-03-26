@@ -2,11 +2,10 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./home/Home"
 import { TopFiveForm } from "./TopFive/TopFiveForm"
-import { TopFiveContext, TopFiveProvider } from "./TopFive/TopFiveProvider"
+import { TopFiveProvider } from "./TopFive/TopFiveProvider"
 import { TopFiveList } from "./TopFive/TopFiveList";
 import { TopFiveDetail } from "./TopFive/TopFiveDetail";
-import { TopFiveProfile } from "./users/TopFiveProfile"
-import { UserContext, UserProvider } from "./users/UserProvider"
+import { UserProvider } from "./users/UserProvider"
 import { DiscoverList } from "./TopFive/DiscoverList"
 import { FollowProvider } from "./Following/FollowProvider"
 
