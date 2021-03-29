@@ -111,6 +111,7 @@ class App extends React.Component {
 
     render() {
         const { imageUrl, imageAlt } = this.state;
+        // console.log('imageUrl: ', imageUrl);
 
 
         const handleImageUpload = () => {
@@ -125,11 +126,35 @@ class App extends React.Component {
             };
 
             // replace cloudname with your Cloudinary cloud_name
-            return fetch('https://api.Cloudinary.com/v1_1/dy1vv6pdy/image/upload', options)
+            return fetch('https://api.cloudinary.com/v1_1/nateromad/image/upload', options)
                 .then(res => res.json())
-                .then(res => console.log(res))
+                .then(res => {
+                    this.setState({
+                      imageUrl: res.secure_url,
+                      imageAlt: `An image of ${res.original_filename}`
+                    })
+                  })
                 .catch(err => console.log(err));
         }
+
+        const openWidget = () => {
+            // create the widget
+            const widget = window.cloudinary.createUploadWidget(
+              {
+                cloudName: 'nateromad',
+                uploadPreset: 'topFIVE_upload',
+              },
+              (error, result) => {
+                if (result.event === 'success') {
+                  this.setState({
+                    imageUrl: result.info.secure_url,
+                    imageAlt: `An image of ${result.info.original_filename}`
+                  })
+                }
+              },
+            );
+            widget.open(); // open up the widget after creation
+          };
 
         return (
             <main className="App">
@@ -139,8 +164,8 @@ class App extends React.Component {
                             <input type="file" />
                         </div>
 
-                        <button type="button" className="btn" onClick={this.handleImageUpload}>Submit</button>
-                        <button type="button" className="btn widget-btn">Upload Via Widget</button>
+                        <button type="button" className="btn" onClick={handleImageUpload}>Submit</button>
+                        <button type="button" className="btn widget-btn" onClick={openWidget}>Upload Via Widget</button>
                     </form>
                 </section>
                 <section className="right-side">
