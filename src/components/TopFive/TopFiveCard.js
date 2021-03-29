@@ -9,9 +9,9 @@ import { FollowContext } from "../Following/FollowProvider";
 
 export const TopFiveCard = ({ topFive }) => {
     const { following, getFollow, addFollow, deleteFollow } = useContext(FollowContext)
-    const isFollowing = following.find(followers => followers.topFiveId === topFive.id  && followers.userId === parseInt(sessionStorage.getItem(userStorageKey)))
+    const isFollowing = following.find(followers => followers.topFiveId === topFive.id && followers.userId === parseInt(sessionStorage.getItem(userStorageKey)))
     // const isFollowing = following.find(followers => followers.topFiveId === topFive.id && topFive.userId === parseInt(sessionStorage.getItem(userStorageKey)))
-    
+
     const history = useHistory()
 
     const handleFollow = () => {
@@ -51,11 +51,11 @@ export const TopFiveCard = ({ topFive }) => {
                     <Card.Text> num4 {topFive.num4} </Card.Text>
                     <Card.Text> num5 {topFive.num5} </Card.Text>
                     {
-                        // topFive.userId !== parseInt(sessionStorage.getItem(userStorageKey)) ?
+                        topFive.userId !== parseInt(sessionStorage.getItem(userStorageKey)) ?
                             isFollowing
                                 ? <Button onClick={handleUnfollow} className="cardFollow"> Unfollow </Button>
                                 : <Button onClick={handleFollow} className="cardFollow"> Follow </Button>
-                            // : ""
+                            : ""
                     }
                 </Card.Body>
             </Card>
