@@ -41,6 +41,7 @@ export const Register = () => {
                             password: registerUser.password,
                             location: registerUser.location,
                             bio: registerUser.bio
+                            // imageUrl: registerUser.image
                         })
                     })
                         .then(res => res.json())
@@ -94,11 +95,11 @@ export const Register = () => {
                 </fieldset>
                 <fieldset>
                 </fieldset>
+                <App />
                 <fieldset>
                     <button type="submit"> Sign in </button>
                 </fieldset>
             </form>
-            <App />
         </main>
     )
 }
@@ -130,31 +131,31 @@ class App extends React.Component {
                 .then(res => res.json())
                 .then(res => {
                     this.setState({
-                      imageUrl: res.secure_url,
-                      imageAlt: `An image of ${res.original_filename}`
+                        imageUrl: res.secure_url,
+                        imageAlt: `An image of ${res.original_filename}`
                     })
-                  })
+                })
                 .catch(err => console.log(err));
         }
 
         const openWidget = () => {
             // create the widget
             const widget = window.cloudinary.createUploadWidget(
-              {
-                cloudName: 'nateromad',
-                uploadPreset: 'topFIVE_upload',
-              },
-              (error, result) => {
-                if (result.event === 'success') {
-                  this.setState({
-                    imageUrl: result.info.secure_url,
-                    imageAlt: `An image of ${result.info.original_filename}`
-                  })
-                }
-              },
+                {
+                    cloudName: 'nateromad',
+                    uploadPreset: 'topFIVE_upload',
+                },
+                (error, result) => {
+                    if (result.event === 'success') {
+                        this.setState({
+                            imageUrl: result.info.secure_url,
+                            imageAlt: `An image of ${result.info.original_filename}`
+                        })
+                    }
+                },
             );
             widget.open(); // open up the widget after creation
-          };
+        };
 
         return (
             <main className="App">
