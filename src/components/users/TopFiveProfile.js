@@ -27,7 +27,7 @@ export const TopFiveProfile = () => {
     return (
         <>
                 <section className="topFiveProfileCardContainer">
-                <h2>topFive Profile Card</h2>
+                <h2 style={{textAlign: "center"}} >topFive Profile Card</h2>
                 <div>
                     {
                         topFiveProfile.map(users => {

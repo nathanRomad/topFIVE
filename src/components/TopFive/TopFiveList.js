@@ -14,11 +14,11 @@ export const TopFiveList = () => {
         // debugger
         getTopFive()
     }, [])
-        // 
+    // 
 
     useEffect(() => {
         const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
-        
+
         const filteredTopFive = topFive.filter(topFive => topFive.userId === currentUserId)
         setUserTopFive(filteredTopFive)
     }, [topFive])
@@ -26,16 +26,16 @@ export const TopFiveList = () => {
     return (
         // need a conditional to determine if there are any cards, true=render cards false=hold render
         <>
-                <section className="topFiveCardContainer">
-                    <h2 style={{textAlign: "center"}} >topFIVE</h2>
-                    <div className="mainFeed-myTopFive">
-                        {
-                            userTopFive.map(topFive => {
-                                return <TopFiveCard key={topFive.id} topFive={topFive} />
-                            })
-                        }
-                    </div>
-                </section>
+            <h2 style={{ textAlign: "center" }} >topFIVE</h2>
+            <section className="topFiveCardContainer">
+                <div className="mainFeed-myTopFive">
+                    {
+                        userTopFive.map(topFive => {
+                            return <TopFiveCard key={topFive.id} topFive={topFive} />
+                        })
+                    }
+                </div>
+            </section>
         </>
     )
 }
