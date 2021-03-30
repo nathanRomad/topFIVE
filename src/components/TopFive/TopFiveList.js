@@ -27,7 +27,7 @@ export const TopFiveList = () => {
         <>
                 <section className="topFiveCardContainer">
                     <h2 style={{textAlign: "center"}} >topFIVE</h2>
-                    <div className="mainFeedContainer">
+                    <div className="mainFeed-myTopFive">
                         {
                             userTopFive.map(topFive => {
                                 return <TopFiveCard key={topFive.id} topFive={topFive} />

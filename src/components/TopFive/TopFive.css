@@ -17,15 +17,7 @@
     padding: 5%;
 }
 
-.mainFeed-following {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin: 1%;
-    flex-wrap: wrap;
-  }
-
-  .mainFeed-discover {
+.mainFeed-following, .mainFeed-discover, .mainFeed-myTopFive {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
