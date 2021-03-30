@@ -43,6 +43,9 @@ export const Login = () => {
                 <div>User does not exist</div>
                 <button className="button--close" onClick={e => setExistDialog(false)}>Close</button>
             </dialog>
+            <div className="background_image">
+
+            </div>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Welcome to topFIVE</h1>
@@ -62,13 +65,11 @@ export const Login = () => {
                             Sign in
                         </button>
                     </fieldset>
+                    <Link to="/register">Register for an account</Link>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Register for an account</Link>
             </section>
         </main>
     )
 }
 
-{/* <img src="/src/components/images/tv_surround.png" alt=""></img> */}
+{/* <img src="/src/components/images/tv_surround.png" alt=""></img> */ }

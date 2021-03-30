@@ -13,6 +13,9 @@ export const NavBar = (props) => {
   return (
     <nav className="navbar">
       <ul className="nav nav-pills nav-fill">
+        <li className="logo">  
+          <div className="logo-dimensions" > </div>
+        </li>
         <li className="nav-item">
           <Link className="nav-link" to="/">Home</Link>
         </li>
@@ -22,12 +25,12 @@ export const NavBar = (props) => {
         <li className="nav-item">
           <Link className="nav-link" to="/discover">Discover</Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link className="nav-link" to="/friends">Friends</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/messages">Messages</Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link className="nav-link" to="" onClick={Logout}>Logout</Link>
         </li>

@@ -4,6 +4,7 @@ import { userStorageKey } from "../auth/authSettings";
 import Button from 'react-bootstrap/Button'
 import { Link, useHistory } from "react-router-dom"
 import { FollowContext } from "../Following/FollowProvider";
+import "../TopFive/TopFive.css"
 
 // const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
 
@@ -31,7 +32,7 @@ export const TopFiveCard = ({ topFive }) => {
     }, [])
 
     return (
-        <section className="topFIVEcard">
+        <section className="topFIVEcard" >
             <Card
                 style={{ width: '18rem' }}>
                 <Card.Body>

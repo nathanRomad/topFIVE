@@ -32,7 +32,7 @@ export const FollowList = () => {
         <>
             <section className="mainFeedContainer">
                 <h2>Following</h2>
-                <div>
+                <div className="mainFeed-following">
                     {
                         followCards.map(topFive => {
                             // debugger

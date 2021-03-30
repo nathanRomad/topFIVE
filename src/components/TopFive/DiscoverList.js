@@ -23,7 +23,7 @@ export const DiscoverList = () => {
         <>
             <section className="discoverTopFiveContainer">
                 <h2>Discover topFIVE</h2>
-                <div>
+                <div className="mainFeed-discover">
                     {
                         discoverTopFive.map(topFive => {
                             return <TopFiveCard key={topFive.id} topFive={topFive} />

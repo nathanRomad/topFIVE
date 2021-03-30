@@ -1,7 +1,8 @@
-.topFiveCardForm {
+.topFiveCardForm, .topFiveProfileCardContainer {
     border: 1px solid black;
     width: 450px;
     height: 650px;
+    padding: 1%;
 }
 
 .topFiveCardContainer {
@@ -10,28 +11,25 @@
     height: auto;
 }
 
-.topFiveProfileCardContainer {
-    border: 1px solid black;
-    width: auto;
-    height: auto;
-}
-
 .homepageContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 5%;
 }
 
-/* .cardButton {
+.mainFeed-following, .mainFeed-discover, .mainFeed-myTopFive {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 1%;
+    flex-wrap: wrap;
+  }
+
+.cardButton {
     display: flex;
     justify-content: flex-end;
-} */
+}
 
-/* .topFIVEcard {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start space-evenly;
-    border: 1px solid black;
-    width: min-content;
-    height: min-content;
-} */
+.topFIVEcard {
+    margin: 2% !important;
+}
