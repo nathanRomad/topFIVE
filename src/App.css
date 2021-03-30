@@ -117,3 +117,7 @@
   height: 300px;
   width: 300px;
 }
+
+h2 {
+  text-align: center !important;
+}

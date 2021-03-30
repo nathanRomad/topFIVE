@@ -26,8 +26,8 @@ export const TopFiveList = () => {
         // need a conditional to determine if there are any cards, true=render cards false=hold render
         <>
                 <section className="topFiveCardContainer">
-                    <h2>topFIVE</h2>
-                    <div>
+                    <h2 style={{textAlign: "center"}} >topFIVE</h2>
+                    <div className="mainFeedContainer">
                         {
                             userTopFive.map(topFive => {
                                 return <TopFiveCard key={topFive.id} topFive={topFive} />
