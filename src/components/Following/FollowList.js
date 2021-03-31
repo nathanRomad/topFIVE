@@ -31,7 +31,7 @@ export const FollowList = () => {
     return (
         <>
             <section className="mainFeedContainer">
-            <h2 style={{ textAlign: "center" }} >Following</h2>
+            <h2 className="following-header" >Following</h2>
                 <div className="mainFeed-following">
                     {
                         followCards.map(topFive => {

@@ -32,9 +32,29 @@
 
 .topFIVEcard {
     margin: 2% !important;
+    padding: 10px 10px;
     border-radius: 4px;
     background: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
+    /* box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 20px rgba(0,0,0,.5); */
+    /* transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12); */
+}
+
+.topFIVEcard:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #1E2745;
+}
+
+.following-header {
+    text-align: center;
+    /* background-color: rgb(236, 236, 236); */
+}
+
+.topFIVEprofileCard {
+    margin: 2%;
     padding: 10px 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
 }
