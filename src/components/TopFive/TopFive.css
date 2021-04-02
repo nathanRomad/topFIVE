@@ -1,7 +1,8 @@
 .topFiveCardForm, .topFiveProfileCardContainer {
     border: 1px solid black;
     width: 450px;
-    height: 650px;
+    height: auto;
+    max-height: 750px;
     padding: 1%;
 }
 
@@ -31,20 +32,54 @@
 }
 
 .topFIVEcard {
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: auto;
+    background-color: #white;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid #f2f8f9;
+}
+    .topFIVEcard:hover {
+      transition: all 0.2s ease-out;
+      box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
+      top: -4px;
+      border: 1px solid #f2f8f9;
+      background-color: white;
+    }
+  
+    .topFIVEcard:before {
+      background: #f2f8f9;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(2);
+      transform-origin: 50% 50%;
+      transition: transform 0.15s ease-out;
+    }
+  
+    .topFIVEcard:hover:before {
+      transform: scale(2.15);
+    }
+
+/* {
     margin: 2% !important;
     padding: 10px 10px;
     border-radius: 4px;
     background: #fff;
     box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
-    /* box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 20px rgba(0,0,0,.5); */
-    /* transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12); */
-}
+} */
 
-.topFIVEcard:hover {
+/* .topFIVEcard:hover {
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #1E2745;
-}
+} */
 
 .following-header {
     text-align: center;
