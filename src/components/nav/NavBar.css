@@ -1,6 +1,10 @@
+@import "../../../node_modules/nes.css/css/nes.css";
+
 .navbar {
     display: flex;
-    justify-content: space-between !important;
+    justify-content: center !important;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .nav-item {

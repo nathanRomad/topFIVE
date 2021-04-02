@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { userStorageKey } from "../auth/authSettings"
 import "./NavBar.css"
+import "nes.css/css/nes.min.css";
 
 const Logout = () => {
   if (window.confirm("Are you sure you want to log out?")) {
