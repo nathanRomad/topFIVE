@@ -5,6 +5,19 @@
     justify-content: center !important;
     font-size: 2em;
     font-family: 'Press Start 2P', cursive;
+
+    margin: 50px;
+    padding: 50px;
+}
+
+.navbar a {
+    color: #a7a4e0 !important;
+}
+
+.nes-container {
+    margin: 25px !important;
+    background-color: #54585a;
+
 }
 
 .nav-item {

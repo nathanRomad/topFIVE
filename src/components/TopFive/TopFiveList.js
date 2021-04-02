@@ -26,7 +26,7 @@ export const TopFiveList = () => {
     return (
         // need a conditional to determine if there are any cards, true=render cards false=hold render
         <>
-            <h2 style={{ textAlign: "center" }} >topFIVE</h2>
+            <h3 style={{ textAlign: "center" }} >topFIVE</h3>
             <section className="topFiveCardContainer">
                 <div className="mainFeed-myTopFive">
                     {

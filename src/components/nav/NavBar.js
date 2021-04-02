@@ -12,7 +12,7 @@ const Logout = () => {
 
 export const NavBar = (props) => {
   return (
-    <nav className="navbar">
+    <nav className="navbar nes-container is-rounded">
       <ul className="nav nav-pills nav-fill">
         <li className="logo">  
           <div className="logo-dimensions" > </div>
@@ -21,7 +21,7 @@ export const NavBar = (props) => {
           <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/topFIVE">my topFIVE</Link>
+          <Link className="nav-link" to="/topFIVE">my_topFIVE</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/discover">Discover</Link>

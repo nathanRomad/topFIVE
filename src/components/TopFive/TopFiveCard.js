@@ -46,16 +46,16 @@ export const TopFiveCard = ({ topFive }) => {
                                 : <Card.Title> {topFive.title} </Card.Title>
                         }
                     </Card.Title>
-                    <Card.Text> num1 {topFive.num1} </Card.Text>
-                    <Card.Text> num2 {topFive.num2} </Card.Text>
-                    <Card.Text> num3 {topFive.num3} </Card.Text>
-                    <Card.Text> num4 {topFive.num4} </Card.Text>
-                    <Card.Text> num5 {topFive.num5} </Card.Text>
+                    <Card.Text> 1. {topFive.num1} </Card.Text>
+                    <Card.Text> 2. {topFive.num2} </Card.Text>
+                    <Card.Text> 3. {topFive.num3} </Card.Text>
+                    <Card.Text> 4. {topFive.num4} </Card.Text>
+                    <Card.Text> 5. {topFive.num5} </Card.Text>
                     {
                         topFive.userId !== parseInt(sessionStorage.getItem(userStorageKey)) ?
                             isFollowing
-                                ? <Button onClick={handleUnfollow} className="cardFollow"> Unfollow </Button>
-                                : <Button onClick={handleFollow} className="cardFollow"> Follow </Button>
+                                ? <Button onClick={handleUnfollow} className="cardFollow nes-btn is-disabled"> Unfollow </Button>
+                                : <Button onClick={handleFollow} className="cardFollow nes-btn is-primary"> Follow </Button>
                             : ""
                     }
                 </Card.Body>

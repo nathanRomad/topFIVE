@@ -21,7 +21,7 @@ export const DiscoverList = () => {
 
     return (
         <>
-            <h2 style={{ textAlign: "center" }} >Discover topFIVE</h2>
+            <h3 style={{ textAlign: "center" }} >Discover topFIVE</h3>
             <section className="discoverTopFiveContainer">
                 <div className="mainFeed-discover">
                     {

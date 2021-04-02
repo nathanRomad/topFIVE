@@ -31,7 +31,7 @@ export const FollowList = () => {
     return (
         <>
             <section className="mainFeedContainer">
-            <h2 className="following-header" >Following</h2>
+                <h3 className="following-header" >Following</h3>
                 <div className="mainFeed-following">
                     {
                         followCards.map(topFive => {
