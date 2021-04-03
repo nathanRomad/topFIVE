@@ -20,12 +20,18 @@
 
 .registration {
     display: flex; 
-    position: absolute; 
-    top: 20%;
-    right: 35%;  
+    position: absolute;
+    align-content: center;
+    top: 25%;
+    right: 28%;  
     justify-content: space-evenly;
 }
 
 .App {
     margin-left: 15%;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
 }

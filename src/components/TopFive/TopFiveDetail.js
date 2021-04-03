@@ -30,10 +30,10 @@ export const TopFiveDetail = () => {
     }, [])
 
     return (
-        <section className="topFIVEcard">
-            <Card
-                style={{ width: '18rem' }}>
-                <Card.Body>
+        <section className="topFIVEcard detailCard nes-container is-rounded">
+            <Card className="">
+                {/* style={{ width: '18rem' }}> */}
+                <Card.Body className="">
                     <Card.Header>topFIVE</Card.Header>
                     <Card.Title> {topFiveDetail.title} </Card.Title>
                     <Card.Text> num1 {topFiveDetail.num1} </Card.Text>
@@ -41,12 +41,12 @@ export const TopFiveDetail = () => {
                     <Card.Text> num3 {topFiveDetail.num3} </Card.Text>
                     <Card.Text> num4 {topFiveDetail.num4} </Card.Text>
                     <Card.Text> num5 {topFiveDetail.num5} </Card.Text>
-                    <button className="nes-btn is-error" onClick={handleRelease}>Delete topFive</button>
-                    <button className="nes-btn is-warning" onClick={() => {
-                        history.push(`/topFIVE/edit/${topFiveDetail.id}`)
-                    }}>Edit topFive</button>
                 </Card.Body>
             </Card>
+            <button className="nes-btn is-error deleteBtn" onClick={handleRelease}>Delete topFive</button>
+            <button className="nes-btn is-warning editBtn" onClick={() => {
+                history.push(`/topFIVE/edit/${topFiveDetail.id}`)
+            }}>Edit topFive</button>
         </section >
     )
 }

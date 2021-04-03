@@ -148,8 +148,8 @@ export const Register = () => {
                                 <input type="file" />
                             </div>
 
-                            <button type="button" className="btn" onClick={handleImageUpload}>Submit</button>
-                            <button type="button" className="btn widget-btn" onClick={openWidget}>Upload Via Widget</button>
+                            <button type="button" className="btn nes-btn is-primary" onClick={handleImageUpload}>Submit</button>
+                            <button type="button" className="btn widget-btn nes-btn is-primary" onClick={openWidget}>Upload Via Widget</button>
                         </form>
                     </section>
                     <section className="right-side">
