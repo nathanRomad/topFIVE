@@ -57,7 +57,7 @@ export const TopFiveCard = ({ topFive }) => {
                 {
                     topFive.userId !== parseInt(sessionStorage.getItem(userStorageKey)) ?
                         isFollowing
-                            ? <Button onClick={handleUnfollow} className="cardFollow nes-btn is-disabled"> Unfollow </Button>
+                            ? <Button style={{cursor: "pointer"}} onClick={handleUnfollow} className="cardFollow nes-btn is-disabled"> Unfollow </Button>
                             : <Button onClick={handleFollow} className="cardFollow nes-btn is-primary"> Follow </Button>
                         : ""
                 }
