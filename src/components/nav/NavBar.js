@@ -15,7 +15,7 @@ export const NavBar = (props) => {
     <nav className="navbar nes-container is-rounded">
       <ul className="nav nav-pills nav-fill">
         <li className="logo">  
-          <div className="logo-dimensions" > </div>
+          <div className="logo-dimensions" ><i class="nes-icon trophy is-large"></i> </div>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/">Home</Link>

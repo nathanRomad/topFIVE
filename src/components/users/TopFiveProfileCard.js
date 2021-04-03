@@ -6,7 +6,7 @@ import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-reac
 // import '../../App.css'
 
 export const TopFiveProfileCard = ({ users }) => (
-    <section className="topFIVEprofileCard">
+    <section className="topFIVEprofileCard nes-container is-rounded">
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={users.imageUrl} />
             {/* <Image cloudName="nateromad" publicId="" width="300" crop="scale" /> */}

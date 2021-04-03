@@ -32,6 +32,7 @@ export const FollowList = () => {
         <>
             <section className="mainFeedContainer">
                 <h3 className="following-header" >Following</h3>
+                <br></br>
                 <div className="mainFeed-following">
                     {
                         followCards.map(topFive => {
