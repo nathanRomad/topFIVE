@@ -1,10 +1,43 @@
-.nav {
+@import "../../../node_modules/nes.css/css/nes.css";
+
+.navbar {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
+    justify-content: center !important;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+    margin: 50px;
+    padding: 50px;
+}
+
+.navbar a {
+    color: #a7a4e0 ;
+}
+
+a:hover {
+    color: #684dee !important;
+}
+
+
+.nes-container {
+    margin: 25px !important;
+    background-color: #54585a;
+
 }
 
 .nav-item {
     flex-basis: 20%;
     list-style-type: none;
+}
+
+.logo-dimensions {
+    width: 50px;
+    height: 50px;
+    /* background-image: url("../images/tv_surround.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo {
+    margin-right: 15px;
 }
