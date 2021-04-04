@@ -56,11 +56,29 @@
 }
 
 .detailCard {
-    width: 320px;
-    min-height: 550px;
-    height: auto;
     margin: 10px;
     padding: 10px;
+    width: 350px;
+    height: auto;
+    min-height: 550px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: content;
+    position: relative;
+    background-color: white;
+    float: none;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    font-size: smaller;
+    left: 40%;
+}
+
+.detailCardText {
+    margin: 1px;
+    padding: 1px;
 }
 
 .deleteBtn .editBtn {
@@ -95,6 +113,8 @@
 
 .card-header {
     width: auto;
+    margin: 10px;
+    padding: 10px;
 }
 
 .card-img-top {
