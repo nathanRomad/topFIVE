@@ -54,7 +54,7 @@ export const Login = () => {
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
                             id="email"
-                            className="form-control"
+                            className="form-control nes-input"
                             placeholder="Email address"
                             required autoFocus
                             value={loginUser.email}

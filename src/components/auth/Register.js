@@ -113,27 +113,27 @@ export const Register = () => {
                     <h1 className="h3 mb-3 font-weight-normal">Please Register for topFIVE</h1>
                     <fieldset>
                         <label htmlFor="firstName"> First Name </label>
-                        <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
+                        <input type="text" name="firstName" id="firstName" className="form-control nes-input" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="lastName"> Last Name </label>
-                        <input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
+                        <input type="text" name="lastName" id="lastName" className="form-control nes-input" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
-                        <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
+                        <input type="email" name="email" id="email" className="form-control nes-input" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputPassword"> Password </label>
-                        <input type="password" name="password" id="password" className="form-control" placeholder="Password" required value={registerUser.password} onChange={handleInputChange} />
+                        <input type="password" name="password" id="password" className="form-control nes-input" placeholder="Password" required value={registerUser.password} onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputLocation"> Location </label>
-                        <input type="location" name="location" id="location" className="form-control" placeholder="Location" required value={registerUser.location} onChange={handleInputChange} />
+                        <input type="location" name="location" id="location" className="form-control nes-input" placeholder="Location" required value={registerUser.location} onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputBio"> Bio </label>
-                        <input type="bio" name="bio" id="bio" className="form-control" placeholder="Bio" required value={registerUser.bio} onChange={handleInputChange} />
+                        <input type="bio" name="bio" id="bio" className="form-control nes-input" placeholder="Bio" required value={registerUser.bio} onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
                     </fieldset>
@@ -148,8 +148,8 @@ export const Register = () => {
                                 <input type="file" />
                             </div>
 
-                            <button type="button" className="btn" onClick={handleImageUpload}>Submit</button>
-                            <button type="button" className="btn widget-btn" onClick={openWidget}>Upload Via Widget</button>
+                            <button type="button" className="btn nes-btn is-primary" onClick={handleImageUpload}>Submit</button>
+                            <button type="button" className="btn widget-btn nes-btn is-primary" onClick={openWidget}>Upload Via Widget</button>
                         </form>
                     </section>
                     <section className="right-side">

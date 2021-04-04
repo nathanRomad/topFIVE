@@ -30,23 +30,29 @@ export const TopFiveDetail = () => {
     }, [])
 
     return (
-        <section className="topFIVEcard">
-            <Card
-                style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Header>topFIVE</Card.Header>
-                    <Card.Title> {topFiveDetail.title} </Card.Title>
-                    <Card.Text> num1 {topFiveDetail.num1} </Card.Text>
-                    <Card.Text> num2 {topFiveDetail.num2} </Card.Text>
-                    <Card.Text> num3 {topFiveDetail.num3} </Card.Text>
-                    <Card.Text> num4 {topFiveDetail.num4} </Card.Text>
-                    <Card.Text> num5 {topFiveDetail.num5} </Card.Text>
-                    <button onClick={handleRelease}>Delete topFive</button>
-                    <button onClick={() => {
-                        history.push(`/topFIVE/edit/${topFiveDetail.id}`)
-                    }}>Edit topFive</button>
-                </Card.Body>
-            </Card>
-        </section >
+        <>
+            <h3 style={{ textAlign: "center" }} >topFIVE</h3>
+            <section className="topFIVEcard detailCard nes-container is-rounded">
+                <Card className="">
+                    {/* style={{ width: '18rem' }}> */}
+                    <Card.Body className="">
+                        <Card.Header className="nes-container is-rounded is-dark">
+                            <Card.Title> {topFiveDetail.title} </Card.Title>
+                        </Card.Header>
+                        <ol>
+                            <li><Card.Text className="detailCardText"> num1 {topFiveDetail.num1} </Card.Text></li>
+                            <li><Card.Text className="detailCardText"> num2 {topFiveDetail.num2} </Card.Text></li>
+                            <li><Card.Text className="detailCardText"> num3 {topFiveDetail.num3} </Card.Text></li>
+                            <li><Card.Text className="detailCardText"> num4 {topFiveDetail.num4} </Card.Text></li>
+                            <li><Card.Text className="detailCardText"> num5 {topFiveDetail.num5} </Card.Text></li>
+                        </ol>
+                    </Card.Body>
+                </Card>
+                <button className="nes-btn is-error deleteBtn" onClick={handleRelease}>Delete topFive</button>
+                <button className="nes-btn is-warning editBtn" onClick={() => {
+                    history.push(`/topFIVE/edit/${topFiveDetail.id}`)
+                }}>Edit topFive</button>
+            </section >
+        </>
     )
 }

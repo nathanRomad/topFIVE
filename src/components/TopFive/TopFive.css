@@ -1,20 +1,39 @@
 .topFiveCardForm, .topFiveProfileCardContainer {
-    border: 1px solid black;
-    width: 450px;
-    height: 650px;
+    min-width: 400px;
+    height: auto;
     padding: 1%;
 }
 
+.topFiveCardForm__container {
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
+    background-color: white;
+}
+
+.topFiveCardForm__formTitle {
+    margin: -13px;
+}
+
 .topFiveCardContainer {
-    border: 1px solid black;
     width: auto;
     height: auto;
 }
 
 .homepageContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 5%;
+}
+
+.mainFeedContainer {
+    padding: 2px;
+    padding-top: 13px;;
+}
+
+.nes-container {
+    margin: 10px !important; 
 }
 
 .mainFeed-following, .mainFeed-discover, .mainFeed-myTopFive {
@@ -25,11 +44,117 @@
     flex-wrap: wrap;
   }
 
+  .topFIVEprofileCard {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
+    background-color: white;
+    min-height: 600px;
+    height: auto;
+}
+
+.detailCard {
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    height: auto;
+    min-height: 550px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: content;
+    position: relative;
+    background-color: white;
+    float: none;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    font-size: smaller;
+    left: 40%;
+}
+
+.detailCardText {
+    margin: 1px;
+    padding: 1px;
+}
+
+.deleteBtn .editBtn {
+    margin: 3px;
+    padding: 3px;
+}
+
 .cardButton {
     display: flex;
     justify-content: flex-end;
 }
 
+.card {
+    width: 275px !important;
+    height: 440px;
+    border: none !important;
+    max-width: 325px;
+    padding: 5px;
+}
+
+.card-body {
+    width: 275px !important;
+    height: 440px;
+    border: none !important;    
+    max-width: 325px;
+    padding: 5px;
+}
+
+.card-title {
+    font-size: 1.3em;
+}
+
+.card-header {
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-img-top {
+    padding-bottom: 10px;
+}
+
 .topFIVEcard {
-    margin: 2% !important;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: content;
+    top: 0px;
+    position: relative;
+    background-color: white;
+    float: none;
+    border-radius: 4px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    font-size: smaller;
+}
+    .topFIVEcard:hover {
+      transition: all 0.2s ease-out;
+      box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
+      top: -4px;
+      background-color: white;
+    }
+  
+    .topFIVEcard:before {
+      background: #f2f8f9;
+      transform: scale(2);
+      transform-origin: 50% 50%;
+      transition: transform 0.15s ease-out;
+    }
+
+    .topFIVEcard:hover:before {
+      transform: scale(2.15);
+    }
+
+.following-header {
+    text-align: center;
 }

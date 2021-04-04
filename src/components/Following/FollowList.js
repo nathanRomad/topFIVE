@@ -2,18 +2,15 @@ import React, { useContext, useEffect, useState } from "react"
 import { TopFiveCard } from "../TopFive/TopFiveCard";
 import { userStorageKey } from "../auth/authSettings";
 import { TopFiveContext } from "../TopFive/TopFiveProvider";
-// import { TopFiveCard } from "./TopFiveCard";
 import { FollowContext } from "./FollowProvider";
 
 export const FollowList = () => {
-    const { following, getFollow, addFollow, deleteFollow } = useContext(FollowContext)
+    const { following, getFollow } = useContext(FollowContext)
     const { topFive, getTopFive } = useContext(TopFiveContext)
-    // console.log('topFive: ', topFive);
 
     const [followCards, setFollowCards] = useState([])
 
     useEffect(() => {
-        // debugger
         getFollow()
     }, [])
 
@@ -34,7 +31,8 @@ export const FollowList = () => {
     return (
         <>
             <section className="mainFeedContainer">
-                <h2>Following</h2>
+                <h3 className="following-header" >Following</h3>
+                <br></br>
                 <div className="mainFeed-following">
                     {
                         followCards.map(topFive => {
