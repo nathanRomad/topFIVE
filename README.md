@@ -1,3 +1,43 @@
+Welcome to topFIVE!
+
+# Setup & install
+    Clone file (git@github.com:nathanRomad/topFIVE.git)
+    mkdir topFIVE-API
+    cd topFIVE-API
+    touch database.json
+    json-server -p 8088 -w database.json
+    mkdir topFIVE
+    cd topFIVE
+    From topFIVE directory, npm install
+    From topFIVE directory, npm start
+
+# Testing
+    From the landing page, click on 'register for an account'. 
+    Fill out all the registration information and upload an image (click submit after image upload) and then click 'sign in'.
+    You will land on the homepage and see your profile picture and card loaded on page left.
+    The center of your homepage is for topFIVE cards you follow, it will be empty until you follow some other users topFIVE cards.
+    On the right side of the homepage you will see the form to create new topFIVE cards of your own. Just fill out the form and click 'add'.
+    You can use the navBar at the top and click 'my_topFIVE' to see all the cards you have created.
+    In order to edit or delete a card, you must click the link title of the card, this will bring you to the detailPage where you can edit or delete your cards.
+    Using the navBar, click 'Discover' to see a list of all topFIVE cards, you can follow or unfollow other users topFIVE cards from here.
+    Once you follow one or more cards, they will be displayed on your homepage under 'Following'. You can also unfollow cards from your homepage.
+    Last is the logout feature, which should be self explanatory.
+    Enjoy topFIVE!
+
+# ERD:
+    https://dbdiagram.io/d/60464c5cfcdcb6230b231e08
+
+# Wireframes: 
+    Figma: 
+    https://www.figma.com/file/BLDRtwio7JlEKuyW3jL9VW/topFIVE_landingPage?node-id=0%3A1
+
+# Technology Stack: 
+    HTML, CSS, Javascript, React, React.bootstrap, DBdiagram, Figma, Cloudinary (API)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
