@@ -89,17 +89,10 @@ export const TopFiveForm = () => {
     }, [])
 
     return (
-<<<<<<< Updated upstream
-        <form className="topFiveCardForm">
-            <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
-            <br></br>
-            <div className="topFiveCardForm__container nes-container is-rounded">
-=======
         <form className={topFiveId ? "topFiveCardFormEdit" : "topFiveCardForm"}>
             <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
             <br></br>
-            <div className={topFiveId ? "topFiveCardForm__containerEdit" : "topFiveCardForm__container nes-container is-rounded"}>
->>>>>>> Stashed changes
+            <div className={topFiveId ? "topFiveCardForm__containerEdit nes-container is-rounded" : "topFiveCardForm__container nes-container is-rounded"}>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Title:</label>
