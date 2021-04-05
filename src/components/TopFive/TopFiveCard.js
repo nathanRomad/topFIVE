@@ -16,7 +16,8 @@ export const TopFiveCard = ({ topFive }) => {
 
     const history = useHistory()
 
-    const handleFollow = () => {
+    const handleFollow = (event) => {
+        event.preventDefault()
         addFollow({
             topFiveId: topFive.id,
             userId: parseInt(sessionStorage.getItem(userStorageKey))
@@ -25,7 +26,8 @@ export const TopFiveCard = ({ topFive }) => {
             // .then(history.push("/"))
     }
 
-    const handleUnfollow = () => {
+    const handleUnfollow = (event) => {
+        event.preventDefault()
         deleteFollow(isFollowing.id)
     }
 
