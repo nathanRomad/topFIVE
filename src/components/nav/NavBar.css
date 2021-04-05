@@ -9,6 +9,19 @@
     padding: 50px;
 }
 
+.footer {
+    display: flex;
+    justify-content: center !important;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+    margin: 50px;
+    padding: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 .navbar a {
     color: #a7a4e0 ;
 }

@@ -41,12 +41,18 @@
 .topFiveCardContainer {
     width: auto;
     height: auto;
+    min-height: 50vw;
 }
 
 .homepageContainer {
     display: flex;
     justify-content: space-around;
     padding: 5%;
+    min-height: 55vw;
+}
+
+.discoverTopFiveContainer {
+    min-height: 75vw;
 }
 
 .mainFeedContainer {
@@ -80,7 +86,9 @@
     min-height: 600px;
     height: auto;
 }
-
+.detailPage {
+    min-height: 50vw;
+}
 .detailCard {
     margin: 20px auto !important;
     padding: 10px;
@@ -99,6 +107,7 @@
     z-index: 0;
     overflow: hidden;
     font-size: smaller;
+    /* min-height: 50vw; */
 }
 
 .detailCardText {

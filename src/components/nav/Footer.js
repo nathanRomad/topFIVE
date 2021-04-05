@@ -12,7 +12,7 @@ const Logout = () => {
 
 export const Footer = (props) => {
     return (
-        <nav className="navbar nes-container is-rounded">
+        <nav className="footer nes-container is-rounded">
             <ul className="nav nav-pills nav-fill">
                 <a class="nes-icon linkedin is-large" href="https://www.linkedin.com/in/nathan-hamilton-3864b520/" target="_blank" rel="noopener noreferrer"></a>
                 <a class="nes-icon instagram is-large" href="https://www.instagram.com/idreamoftravel/" target="_blank" rel="noopener noreferrer"></a>
