@@ -1,33 +1,3 @@
 body {
     background-color: #dbdbdb !important;
 }
-
-/* .topFIVEhomepage {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start space-evenly;
-}
-
-.profileCard {
-    border: 1px solid black;
-    width: 150px;
-    height: 150px;
-}
-
-.mainFeed {
-    border: 1px solid black;
-    width: 225px;
-    height: 225px;
-
-}
-
-.createNewtopFIVEcard {
-    border: 1px solid black;
-    width: 150px;
-    height: 150px;
-}
-
-.topFiveCardForm {
-    
-} */

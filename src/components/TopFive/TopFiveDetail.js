@@ -34,7 +34,6 @@ export const TopFiveDetail = () => {
             <h3 style={{ textAlign: "center" }} >topFIVE</h3>
             <section className="topFIVEcard detailCard nes-container is-rounded">
                 <Card className="">
-                    {/* style={{ width: '18rem' }}> */}
                     <Card.Body className="">
                         <Card.Header className="nes-container is-rounded is-dark">
                             <Card.Title> {topFiveDetail.title} </Card.Title>

@@ -1,8 +1,15 @@
+/* * {border: 1px solid red} */
 .topFiveCardForm, .topFiveProfileCardContainer {
     min-width: 400px;
     height: auto;
     padding: 1%;
+}
 
+.topFiveCardFormEdit {
+    min-width: 400px;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;    
 }
 
 .topFiveCardForm__container {
@@ -12,7 +19,19 @@
     box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
     background-color: white;
     max-width: 750px;
+    /* left: 30%; */
 }
+
+.topFiveCardForm__containerEdit {
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
+    background-color: white;
+    max-width: 750px;
+    left: 35%;
+}
+
 
 .topFiveCardForm__formTitle {
     margin: -13px;
@@ -36,7 +55,11 @@
 }
 
 .nes-container {
-    margin: 10px !important; 
+    margin: 10px !important;
+}
+
+.is-rounded {
+    margin: 0 auto;
 }
 
 .mainFeed-following, .mainFeed-discover, .mainFeed-myTopFive {
@@ -59,7 +82,7 @@
 }
 
 .detailCard {
-    margin: 10px;
+    margin: 20px auto !important;
     padding: 10px;
     width: 350px;
     height: auto;
@@ -76,7 +99,6 @@
     z-index: 0;
     overflow: hidden;
     font-size: smaller;
-    left: 40%;
 }
 
 .detailCardText {
@@ -95,6 +117,7 @@
 }
 
 .card {
+    /* margin: 0 auto; */
     width: 275px !important;
     height: 440px;
     border: none !important;
@@ -134,7 +157,7 @@
     background-color: white;
     float: none;
     border-radius: 4px;
-    margin: 12px;
+    margin: 0 auto;
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
