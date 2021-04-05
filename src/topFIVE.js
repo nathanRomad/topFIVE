@@ -6,6 +6,7 @@ import { Register } from "./components/auth/Register"
 import { userStorageKey } from "./components/auth/authSettings"
 import { NavBar } from "./components/nav/NavBar"
 import { ApplicationViews } from "./components/ApplicationViews";
+import { Footer } from "./components/nav/Footer";
 
 export const TopFive = () => (
   <>
@@ -15,6 +16,7 @@ export const TopFive = () => (
           <>
             <NavBar />
             <ApplicationViews />
+            <Footer />
           </>
         )
       } else {
