@@ -21,7 +21,8 @@ export const TopFiveCard = ({ topFive }) => {
             topFiveId: topFive.id,
             userId: parseInt(sessionStorage.getItem(userStorageKey))
         })
-            .then(history.push("/"))
+            // .then(window.alert("Followed"))
+            // .then(history.push("/"))
     }
 
     const handleUnfollow = () => {
