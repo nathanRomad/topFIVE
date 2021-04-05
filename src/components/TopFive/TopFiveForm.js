@@ -90,7 +90,7 @@ export const TopFiveForm = () => {
 
     return (
         <form className="topFiveCardForm">
-            <h2 className="topFiveCardForm__formTitle" style={{ textAlign: "center" }} >{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
+            <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
             <br></br>
             <div className="topFiveCardForm__container nes-container is-rounded">
                 <fieldset>

@@ -1,7 +1,9 @@
 .topFiveCardForm, .topFiveProfileCardContainer {
     min-width: 400px;
+    max-width: auto;
     height: auto;
     padding: 1%;
+
 }
 
 .topFiveCardForm__container {
@@ -10,10 +12,13 @@
     border-radius: 4px;
     box-shadow: 0 6px 10px rgba(0,0,0,.25), 0 0 6px rgba(0,0,0,.15);
     background-color: white;
+    max-width: 750px;
+    left: 30%;
 }
 
 .topFiveCardForm__formTitle {
     margin: -13px;
+    text-align: center;
 }
 
 .topFiveCardContainer {
