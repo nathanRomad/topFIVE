@@ -89,10 +89,10 @@ export const TopFiveForm = () => {
     }, [])
 
     return (
-        <form className="topFiveCardForm">
+        <form className={topFiveId ? "topFiveCardFormEdit" : "topFiveCardForm"}>
             <h2 className="topFiveCardForm__formTitle">{topFiveId ? "Edit topFIVE" : "Create topFIVE"}</h2>
             <br></br>
-            <div className="topFiveCardForm__container nes-container is-rounded">
+            <div className={topFiveId ? "topFiveCardForm__containerEdit nes-container is-rounded" : "topFiveCardForm__container nes-container is-rounded"}>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Title:</label>
