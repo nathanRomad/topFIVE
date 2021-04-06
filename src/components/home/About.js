@@ -1,5 +1,4 @@
 import React from "react";
-// import { Nate } from "../images/nate.JPG";
 import "./About.css";
 
 export const About = () => (
@@ -13,7 +12,7 @@ export const About = () => (
             <div className="row">
                 <div className="column">
                     <div className="card">
-                        {/* <img src={Nate} alt="image"></img> */}
+                        {/* <img src="public/images/Nate.jpg" alt="image"></img> */}
                         <div className="container">
                             <h2>Nathan Hamilton</h2>
                             <p className="title">Creator</p>
